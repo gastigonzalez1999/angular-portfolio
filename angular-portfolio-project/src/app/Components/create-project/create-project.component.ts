@@ -24,7 +24,7 @@ export class CreateProjectComponent implements OnInit {
   }
 
   onSubmit(form: any) {
-    console.log(form);
+    console.log(this.project);
   }
 
 }
