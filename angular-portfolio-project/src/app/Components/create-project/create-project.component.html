@@ -1,6 +1,14 @@
 <div class="container">
     <h2>{{title}}</h2>
 
+    <div class="message success" *ngIf="status == 'success'">
+        The project was successfully saved, you can find it <a href="#">here</a> 
+    </div>
+
+    <div class="message failure" *ngIf="status == 'failure'">
+        The project was not successfully saved
+    </div>
+
     <form #projectForm="ngForm" (ngSumbit)="onSubmit(projectForm)">
         <p>
             <label for="name">Name</label>
