@@ -44,7 +44,7 @@
         </p>
         <p>
             <label for="image">Image</label>
-            <input type="file" name="image" placeholder="Upload Image"/>
+            <input type="file" name="image" placeholder="Upload Image" (change)="fileChangeEvent($event)"/>
         </p>
 
         <input type="submit" value="Send" [disabled]="!projectForm">
