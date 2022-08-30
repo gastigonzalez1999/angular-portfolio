@@ -14,6 +14,7 @@ export class CreateProjectComponent implements OnInit {
 
   public title: string;
   public project: Project;
+  public save_project: Project;
   public status: string;
   public filesToUpload: Array<File>;
 
@@ -23,6 +24,7 @@ export class CreateProjectComponent implements OnInit {
   ) {
       this.title = "Create project";
       this.project =  new Project('','','','','','','');
+      this.save_project = new Project('','','','','','','');
       this.status = "";
       this.filesToUpload = [];
     }
@@ -38,6 +40,7 @@ export class CreateProjectComponent implements OnInit {
 
           this._uploadService.makeFileRequest(helpers.url + 'upload-image/' + response.project._id, [], this.filesToUpload, 'image')
           .then((result: any) => {
+            this.save_project = result.project;
             this.status === 'success';
             form.reset();
           });          

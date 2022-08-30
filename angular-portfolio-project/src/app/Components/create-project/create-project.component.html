@@ -2,7 +2,7 @@
     <h2>{{title}}</h2>
 
     <div class="message success" *ngIf="status == 'success'">
-        The project was successfully saved, you can find it <a href="#">here</a> 
+        The project was successfully saved, you can find it <a [routerLink]="['/project', save_project._id]" href="#">here</a> 
     </div>
 
     <div class="message failure" *ngIf="status == 'failure'">

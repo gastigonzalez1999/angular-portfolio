@@ -1,1 +1,20 @@
-<p>projects works!</p>
+<div class="container">
+    <h2>Projects</h2>
+
+    <ul>
+        <li class="project" *ngFor="let project of projects">
+            <a [routerLink]="['project', project._id]" href="">
+                <div class="image">
+                    <img src="{{url + 'get-image/' + project.image}}" *ngIf="project.image" alt="">
+                </div>
+                <h3>{{project.name}}</h3>
+                <p>{{project.category}}</p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<article class="about">
+    <h2>About me</h2>
+    <p>My name is Gaston, I'm 23 years old, I'm currently studying computer engineering and work as a full stack developer at Vangwe</p>
+</article>
