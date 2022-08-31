@@ -212,6 +212,24 @@ form input[type="submit"],
 	border: 1px solid rgba(13, 67, 133, 1);
 	cursor: pointer;
 }
+.button-edit,
+.button-delete {
+	width: 40%;
+	float: left;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+.button-edit {
+	background: skyblue;
+	border: 1px solid balck;
+}
+
+.button-delete {
+	background: palevioletred;
+	border: 1px solid balck;
+}
+
 
 .button-edit,
 .button-delete{
