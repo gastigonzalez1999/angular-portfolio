@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  public widthSlider: number = 0;
+  public widthToSlider: number = 0;
+  @ViewChild('texts') texts: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  loadSlider() {
+    this.widthToSlider = this.widthSlider;
+  }
+
+  resetSlider() {
+    this.widthToSlider = 0;
   }
 
 }

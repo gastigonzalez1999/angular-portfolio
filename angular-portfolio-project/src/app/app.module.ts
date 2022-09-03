@@ -9,7 +9,10 @@ import { ProjectsComponent } from './Components/projects/projects.component';
 import { CreateProjectComponent } from './Components/create-project/create-project.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { ErrorComponent } from './Components/error/error.component';
-import { DetailsComponent } from './details/details.component';
+import { DetailsComponent } from './Components/details/details.component';
+import { EditComponent } from './Components/edit/edit.component';
+import { SliderComponent } from './Components/slider/slider.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { DetailsComponent } from './details/details.component';
     CreateProjectComponent,
     ContactComponent,
     ErrorComponent,
-    DetailsComponent
+    DetailsComponent,
+    EditComponent,
+    SliderComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
